@@ -2,75 +2,12 @@
 {# overwrites #}
 {% block pageHeader %}{% endblock pageHeader %}
 {% block content %}
-<div class="hero-slider">
-  {% for banner in banners %}
-  <div class="single-slide" style="background-image: url({{ banner.background }})">
-    <div class="inner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="slide-content">
-              <div class="slide-p rounded" style="background-color: rgba(255, 255, 255, 0.7)">
-                <h2>{{ banner.headline }}</h2>
-                <h3 class="text-dark font-weight-bold">{{ banner.blurb }}</h3>
-                <div class="flex">
-                  <div class="slide-btn">
-                    <a href="{{ banner.link1.url }}" class="button">{{ banner.link1.text }}</a>
-                  </div>
-                  <div class="slide-btn">
-                    <a href="{{ banner.link2.url }}" class="button">{{ banner.link2.text }}</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
+
+<div 
+  class="h-[50vh] bg-cover bg-center" 
+  style="background-image: url('/assets/img/Teal Grey Blue Trendy Retro Digitalism Creative Presentation.png');" 
+  title="Boy in Bay">
 </div>
-<div class="about-area sp">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="about-content px-4">
-          <h2 class="text-header">{{ about.title }}</h3>
-          <p class="text-lg">{{ about.description }}</p>
-          <a href="{{ about.link.url }}" class="button">{{ about.link.text }}</a>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="about-img">
-          <img src="{{ about.image }}" alt="{{ about.title }}" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr />
-<div class="service-area spmd">
-  <div class="container">
-    <div class="section-title" data-margin="0 0 40px">
-      <h2>{{ topics.title }}</h2>
-      <p>{{ topics.description }}</p>
-    </div>
-    <div class="row">
-      {% for topic in collections.topics %}
-        <div class="col-md-4 single-service-2">
-          <a href="{{ topic.url }}" class="w-100">
-            <div class="inner">
-              <div class="title">
-                <div class="icon">
-                  <i class="fa fa-{{topic.data.faIcon }} text-muted"></i>
-                </div>
-                <h4>{{ topic.data.title }}</h4>
-              </div>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+
+
 {% endblock content %}

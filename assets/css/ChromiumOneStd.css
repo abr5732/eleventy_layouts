@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'ChromiumOneStd';
+  src: url('/assets/fonts/ChromiumOneStd/Chromium One Std Regular.woff2') format('woff2'),
+       url('/assets/fonts/ChromiumOneStd/Chromium One Std Regular.woff') format('woff'),
+       url('/assets/fonts/ChromiumOneStd/Chromium One Std Regular.ttf') format('truetype'),
+       url('/assets/fonts/ChromiumOneStd/Chromium One Std Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

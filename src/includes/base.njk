@@ -5,85 +5,31 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ title }}</title>
+  <title>{{ title or "Ashley Ray" }}</title>
 
       <!-- Required CSS files -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/ChromiumOneStd.css">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/owl.carousel.css">
   <link rel="stylesheet" href="/assets/css/barfiller.css">
   <link rel="stylesheet" href="/assets/css/animate.css">
-  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/slicknav.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/css-layouts/css-grid.css">
-  <link rel="stylesheet" href="/assets/css/css-layouts/flexbox.css">
-  <link rel="stylesheet" href="/assets/css/css-layouts/flex-app-example.css">
-  <link rel="stylesheet" href="/assets/css/css-layouts/responsive-example.css">
-  <link rel="stylesheet" href="/assets/styles/monokai-sublime.css">
+  
+
 
 <body>
-  <div class="preloader">
-    <span class="preloader-spin"></span>
-  </div>
-
-  <div class="site">
+    <div class="site">
     <header>
-      <div class="custom-container">
-        <div class="row">
-          <div class="col-6 col-sm-3 logo-column flex align-items-center justify-content-center">
-            <img class="logo-img" src="/assets/img/logo-img.jpg" alt="site logo" />
-            <a href="/" class="logo">
-              <h4 class="text-light">LayOuts</h4>
-            </a>
-          </div>
-          <div class="col-6 col-sm-9 nav-column clearfix">
-            <div class="right-nav">
-              <div class="header-social">
-                {% for social in settings.socials %}
-                <a href="{{ social.url }}" rel="noopenner noreferrer" target="_blank" class="fa fa-{{ social.name }}"></a>
-                {% endfor %}
-              </div>
-            </div>
-            <nav id="menu" class="d-none d-lg-block">
-              <ul>
-                <li {% if page.url == '/' %} class="current-menu-item" {% endif %} >
-                  <a href="/">Home</a>
-                </li>
-                <li {% if page.url == '/about/' %} class="current-menu-item"{% endif %}>
-                  <a href="/about">About</a>
-                </li>
-                <li {% if page.url == '/topics/' %} class="current-menu-item"{% endif %}>
-                  <a href="/topics">Topics</a>
-                </li>
-                <li {% if page.url == '/resources/' %} class="current-menu-item"{% endif %}>
-                  <a href="/resources">Resources</a>
-                </li>
-                <li {% if page.url == '/contact/' %} class="current-menu-item"{% endif %}>
-                  <a href="/contact">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
+      {% include "header.njk" %}
     </header>
     <main>
     {% block pageHeader %}
-      <div class="page-title spmd" style="background-image: url({{ backgroundImage }})">
-        <div class="container text-center">
-          <h2>{{ title }}</h2>
-          <h3>{{ description }}</h3>
-        </div>
-      </div>
-    {% endblock pageHeader %}
-
-    {% block content %}
-      {{ content | safe }}
-    {% endblock content %}
-
-    {% block postContent %}
     {% endblock postContent %}
   </main>
     <footer>
