@@ -27,7 +27,7 @@ header.site-header {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Antonio', sans-serif;
-  color: #ff2e2c;
+  color: #c80c05;
   -webkit-text-stroke: 0.5px #f3f6fd;
 }
 
@@ -89,10 +89,36 @@ header.site-header {
 /*****************************
  *   02. hero-area
  ***************************** */
-.background-image {
-  width: 1920px;          
-  height: auto;
-  background-image: url('/assets/img/Teal Grey Blue Trendy Retro Digitalism Creative Presentation.png');
-  background-size: cover; 
-  background-position: center;
+.Content-container{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1700px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.Writing-box{
+  background-color: white;         
+  padding: 1.5rem;                 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 2px 4px rgba(0, 0, 0, 0.06);
+  max-width: 800px;
+  border: solid #383499 2px;   
+}
+
+.Subsection-font{
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color:#383499
+}
+
+.Scrollable{
+  background-color: #e3b0aeA6;           
+  padding: 1.5rem;                   
+  box-shadow:                    
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+  max-width: 800px; 
 }
