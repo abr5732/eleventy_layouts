@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/css/animate.css">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/slicknav.css">
-  
+  </head>
 
 
 <body>
@@ -29,7 +29,7 @@
       {% include "header.njk" %}
     </header>
     <main>
-    {% block pageHeader %}
+    {% block postContent %}
     {% endblock postContent %}
   </main>
     <footer>
@@ -40,18 +40,9 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="copyright-txt">
-                  © 2019 Adapted from Flat Pro. All Rights Reserved.
+                  Contact: ashleybeyray@gmail.com
                 </div>
               </div>
-            <div class="col-lg-6 text-right">
-              <div class="footer-nav">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/topics">Topics</a>
-                <a href="/resources">Resources</a>
-                <a href="/contact">Contact</a>
-              </div>
-            </div>
           </div>
         </div>
     </footer>
@@ -69,15 +60,19 @@
   <script src="/assets/js/active.js"></script>
   <script src="/assets/js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>
-    const navButton = document.getElementById("menu-btn");
-    function toggle({ target }){
-      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-      navButton.setAttribute('aria-expanded', !expanded);
-    }
-    navButton && navButton.addEventListener("click", toggle);
-  </script>
 
+  <script>
+  document.getElementById("scrollBtn")?.addEventListener("click", function () {
+    const gradient = document.getElementById("philosophy");
+    if (!gradient.classList.contains("revealed")) {
+      gradient.classList.add("revealed");
+    }
+
+    setTimeout(() => {
+      gradient.scrollIntoView({ behavior: "smooth" });
+    }, 600); // adjust to match your CSS transition duration (1000ms)
+  });
+</script>
 </body>
 
 </html>

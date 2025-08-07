@@ -1,41 +1,62 @@
 {% extends 'base.njk' %}
-{# overwrites #}
-{% block pageHeader %}{% endblock pageHeader %}
-{% block content %}
+{% block postContent %}
 
 <!--background Section-->
 <section 
-  class="h-[50vh] bg-cover bg-center flex items-center justify-center relative" 
-  style="background-image: url('/assets/img/Teal Grey Blue Trendy Retro Digitalism Creative Presentation.png');" 
-  title="Boy in Bay">
+  class="h-[75vh] bg-cover bg-center flex items-center justify-center relative" 
+    style="background-image: url('/assets/img/Teal Grey Blue Trendy Retro Digitalism Creative Presentation.png');" 
+      title="Boy in Bay">
+      
+      
 
-  <!--Overlay-->
-  <div
-    class="flex items-center justify-center p-12"
-    style="
-      width: 1770px;
-      height: 500px;
-      background-color: #e3b0aeA6;
-      border: solid #c80c05 8px">
-  </div>
+        <!--Overlay-->
+          <div class="Overlay-box">
+            
+            <!--Content container-->
+            <div class="Content-container">
+                                            
+                <!-- Text Box 1: Creative Writing -->
+                  <div class="Writing-box">
+                  <h2 class="Subsection-font">How I'm Feeling Now</h2>                               
+                    <div class="Scrollable">
+                      <iframe
+                        src="/assets/files/AshleyOpEd.pdf"                                                         
+                        width="100%"                                                                
+                        height="600px"                                                                        
+                        title="Environmental Piece">                                                                                
+                      </iframe>                                                                                        
+                    </div>                                                                                               
+                  </div> 
 
-<!--Content container-->
-<div class="Content-container">
+                <!-- Text Box 2: Directives -->
+                  <div class="Directives">
+                  <h2 class="Subsection-font">DO!</h2>
+                    <ul class="List">
+                      <li>Make your tea/coffee yourself</li>
+                      <li>Wash your socks/underwear by hand</li>
+                      <li>Dig a hole</li>
+                      <li>Cook something</li>
+                      <li>Skin your knee and then bandage it</li>
+                      <li>Spill rice on the floor and then pick it up one by one using tweezers</li>
+                      <li>Put your phone in a box; package it to be sent to a spot on the opposite side on the globe; put a typo in the address line so they will have to send it back to you; enjoy at least 30 days without a smart phone</li>
+                      <li>Borrow a book from the public library</li>
+                      <li>Build a PC</li>
+                    </ul>
+                  </div>
 
- <!-- Text Box 1: Creative Writing -->
-    <div class="Writing-box">
-      <h2 class="Subsection-font">How I'm Feeling Now</h2>
+            </div>   
 
-      <div class="Scrollable">
-      <iframe>
-        src="/assets/files/AshleyOpEd.pdf"
-        width="100%"
-        height="600px"
-        title="Environmental Piece">
-      </iframe>
-      </div>
-    </div>
+          </div>
+        <div class="button-wrapper">                                   
+          <button id="scrollBtn">Where am I?</button>
+        </div>  
+</section>                                   
+<section class="gradient-transition" id="philosophy">
+  <div class="philosophy-content">
+    <h2 class="Subsection-font">Philosophy</h2>
+    <p>Ashley Ray isn’t a materialist in the consumer-capitalist, status-chasing sense. Nor are they affiliated with the movie starring Razzie Award–winning actress Dakota Johnson. This is an ethical type of materialism, pulled from Tenet 3 of the NEW! Neo-Luddite Manifesto. This materialism promotes an ethos familiar to any collector—be that of antiques or Pokémon cards. It’s about valuing the physical: assigning meaning to objects, honoring their presence, and recognizing the shared temporality between you and the things you keep.
+
+Yes, yes—you’re reading this on a screen. But we live in the technocratic age, baby! Everything’s digital! The least you can do is not let the ideology behind that digital world devour everything you are and love. Instead, appreciate something you can hold in your hands.</p>
 </div>
 </section>
-
-{% endblock content %}
+{% endblock %}}                                                                                                                  
